@@ -1,8 +1,8 @@
 
-nav
+nav class="site-header"
   div class="nav-wrapper grey lighten-5"
-    a href="#" class="brand-logo black-text text-darken-2"
-      = image_tag("/images/muratsumugi_logo.png", alt: "ムラツムギロゴ", size: '150x40', style: "margin-left: 30px; margin-top: 8px;")
+    a class="brand-logo text-darken-2" href="#"
+      = image_tag("/images/muratsumugi_logo.png", alt: "ムラツムギロゴ", size: '150x40', style: "margin-top: 8px;")
     ul class="right hide-on-med-and-down"
       li
         a href="#TOP"
@@ -23,7 +23,7 @@ nav
         a href="#NEWS"
           | NEWS
     a href="#" data-target="slide-out" class="sidenav-trigger"
-      i class="material-icons"
+      i class="large material-icons" style="font-size:30px;color:orange"
         | menu
 
 ul id="slide-out" class="sidenav"
