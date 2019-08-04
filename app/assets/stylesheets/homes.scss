@@ -1,3 +1,176 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.site-header{
+  position: fixed;
+
+  @media screen and (max-width: 992px) {
+    .brand-logo {
+      $margin-left: 100px;
+    }
+  }
+
+  ul{
+    margin-right: 70px;
+
+    a{
+      color: #333333;
+      font-size: 12px;
+      font-family: Verdana;
+    }
+
+    .material-icons {
+      color: pink;
+    }
+  }
+}
+
+.top-container{
+  height: 850px;
+  width: 100%;
+  background-size:cover;
+  background-position: center;
+  background-image: url("/images/top_background.jpg");
+  background-color: #333333;
+
+  .css-fade1{
+    // アニメーション設定
+    animation-name:fade-in;
+    animation-duration:2s; //アニメーション時間
+    animation-timing-function: ease-out; //アニメーションさせるイージング
+    animation-delay:1s; //アニメーション開始させる時間
+    animation-iteration-count:1; //繰り返し回数
+    animation-direction:normal; //往復処理をするかどうか
+    animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+  }
+  // アニメーション
+  @keyframes fade-in {
+    0% {opacity: 0; transform: translate3d(0,20px,0);}
+    100% {opacity: 1; transform: translate3d(0,0,0);}
+  }
+
+  img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+
+    width:100%;
+    max-width:40vw;
+    height:auto;
+  }
+
+  .sub-title{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+
+    width:100%;
+    max-width:40vw;
+    height:auto;
+  }
+}
+
+.vision-container{
+  background-position: center;
+  height: 800px;
+  width: 100%;
+  background-size:cover;
+  // background-color: #FAFAFA;
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+      // color: white;
+    }
+  }
+
+  .left-section{
+    float: left;
+    width: 50％;
+    text-align: right;
+    padding-right: 50px;
+
+    img {
+      width: 600px;
+      height: 450px;
+      margin: 0;
+    }
+  }
+
+  .right-section{
+    float: right;
+    text-align: left;
+    width: 50％;
+    padding-left: 50px;
+    padding-top: 20px;
+
+    h4{
+      margin: 0;
+    }
+  }
+
+  .story-section{
+    font-size: 15px;
+  }
+}
+
+.activity-container{
+  background-position: center;
+  height: 800px;
+  width: 100%;
+  background-size:cover;
+  background-color: #FAFAFA;
+  // font-family: 'kokoro';
+
+  .inner-section{
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+      // color: white;
+    }
+  }
+
+  .left-section{
+    float: left;
+    width: 50％;
+    text-align: right;
+    // padding-top: 80px;
+    padding-right: 50px;
+
+    img {
+      width: 600px;
+      height: 450px;
+      margin: 0;
+    }
+  }
+
+  .right-section{
+    float: right;
+    text-align: left;
+    width: 50％;
+    padding-left: 50px;
+    // padding-top: 20px;
+
+    h4{
+      margin: 0;
+    }
+  }
+
+  .story-section{
+    font-size: 15px;
+  }
+}
