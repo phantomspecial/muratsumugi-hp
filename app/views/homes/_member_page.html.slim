@@ -1,0 +1,69 @@
+/ section class="section member" id="MEMBER"
+/ div class="member-container"
+/   div class="row"
+/     div class="inner-section"
+/       h2 style="margin-top: 0;"
+/         | CORE MEMBER
+    
+/     ul class="main-secction"
+/       - @core_members.each do |core_member|
+/         li class="core-member-profile"
+/           div data-target="modal-member-profile" class="modal-trigger"
+/             = image_tag(core_member.image_url, alt: "profile画像", size: '200x200' )
+/           h6 class="member-title"
+/             ="#{core_member.title}"
+/           h5 class="member-name"
+/             = "#{core_member.name}"
+/           ul class="member-sns"
+/             - unless core_member.facebook.nil?
+/               li class="sns-icon"
+/                 a href="#{core_member.facebook}"
+/                   = image_tag("/images/icons/facebook.png", alt: "facebook画像", size: '30x30' )
+/             - unless core_member.twitter.nil?
+/               a href="#{core_member.twitter}"
+/                 li class="sns-icon"
+/                   = image_tag("/images/icons/twitter.png", alt: "twitter画像", size: '30x30' )
+/             - unless core_member.instagram.nil?
+/               li class="sns-icon"
+/                 a href="#{core_member.twitter}"
+/                   = image_tag("/images/icons/instagram.png", alt: "instagram画像", size: '30x30' )
+
+/ div class="member-container"
+/   div class="row"
+/     div class="inner-section"
+/       h2 style="margin-top: 0;"
+/         | SUPPORTING MEMBER
+
+/     ul class="main-secction"
+/       - @cooperators.each do |cooperator|
+/         li class="core-member-profile"
+/           a class="modal-trigger" href="#modal-member-profile"
+/             = image_tag cooperator.image_url, alt: "profile画像", size: '200x200'
+
+/           div id="modal-member-profile" class="modal"
+/             div class="modal-content"
+/               h4
+/                 | Modal Header
+/               p
+/                 | A bunch of text
+/             div class="modal-footer"
+/               a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"
+/                 | Agree
+
+/           h6 class="member-title"
+/             ="#{cooperator.title}"
+/           h5 class="member-name"
+/             = "#{cooperator.name}"
+/           ul class="member-sns"
+/             - unless cooperator.facebook.nil?
+/               li class="sns-icon"
+/                 a href="#{cooperator.facebook}"
+/                   = image_tag("/images/icons/facebook.png", alt: "facebook画像", size: '30x30' )
+/             - unless cooperator.twitter.nil?
+/               a href="#{cooperator.twitter}"
+/                 li class="sns-icon"
+/                   = image_tag("/images/icons/twitter.png", alt: "twitter画像", size: '30x30' )
+/             - unless cooperator.instagram.nil?
+/               li class="sns-icon"
+/                 a href="#{cooperator.twitter}"
+/                   = image_tag("/images/icons/instagram.png", alt: "instagram画像", size: '30x30' )
