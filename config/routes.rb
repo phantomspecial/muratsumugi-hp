@@ -5,6 +5,5 @@ Rails.application.routes.draw do
 
   # Resources
   resource :homes, only: [:index]
-  resource :admin, only: [:index]
   resource :members
 end
