@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
+
+  # Root
   root 'homes#index'
+
+  # Resources
   resource :homes, only: [:index]
-  # resource :news, only: [:index]
+  resource :admin, only: [:index]
+  resource :members
 end

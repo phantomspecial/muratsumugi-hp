@@ -24,4 +24,5 @@ class Member < ApplicationRecord
   scope :core_members, ->() { where(member_type: 0) }
   scope :support_members, ->() { where(member_type: 1) }
   scope :project_members, ->(project_id) { where(project_id: project_id) }
+
 end

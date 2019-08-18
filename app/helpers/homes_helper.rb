@@ -1,10 +1,6 @@
 module HomesHelper
 
-  def set_news
-    @news = News.all
-  end
-
-  def set_members
+  def set_core_members
     @core_members = Member.core_members
   end
 
