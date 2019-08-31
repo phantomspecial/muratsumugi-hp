@@ -1,0 +1,16 @@
+/ section class="section news" id="NEWS"
+/ div class="news-container"
+/   div class="row"
+/     div class="inner-section"
+/       h2 style="margin-top: 0;"
+/         | NEWS
+/
+/     div class=" main-section"
+/       - @news.each do |news|
+/         div class="news-contents"
+/           div class="news-timezone"
+/             = "#{news.created_at.strftime("%Y-%m-%d")}"
+/           div class="news-title"
+/             = "#{news.title}"
+/           div class="news-link"
+/             = "→ 詳しく確認する"

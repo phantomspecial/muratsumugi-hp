@@ -176,7 +176,6 @@
   width: 100%;
   background-size:cover;
   text-align: center;
-  // font-family: 'kokoro';
 
   .inner-section{
     padding-top: 80px;
@@ -190,7 +189,6 @@
   .main-secction{
     .core-member-profile{
       text-align: center;
-      margin: 20px;
       display:inline-block;
     }
 
@@ -206,6 +204,70 @@
     h5{
       margin: 0;
       // color: white;
+    }
+  }
+}
+
+.history-container{
+  background-position: center;
+  height: 1100px;
+  background-size:cover;
+  background-color: #FAFAFA;
+  text-align: center;
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-secction{
+    margin-top: 20px;
+
+  }
+
+  .story-section{
+    margin-top: 40px;
+    font-size: 15px;
+  }
+  .movie-section{
+    margin-top: 40px;
+  }
+}
+
+.news-container{
+  background-position: center;
+  height: 750px;
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+  // font-family: 'kokoro';
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-section{
+    margin-top: 30px;
+
+    .news-contents{
+      margin-top: 40px;
+      .news-timezone{
+        margin-bottom: 10px;
+      }
+      .news-title{
+        margin: 10px;
+      }
     }
   }
 }
