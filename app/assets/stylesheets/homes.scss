@@ -1,7 +1,3 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .site-header{
   position: fixed;
 
@@ -31,7 +27,7 @@
   width: 100%;
   background-size:cover;
   background-position: center;
-  background-image: url("/images/top_background.jpg");
+  background-image: url("/images/top_background.png");
   background-color: #333333;
 
   .css-fade1{
@@ -172,5 +168,44 @@
 
   .story-section{
     font-size: 15px;
+  }
+}
+
+.member-container{
+  background-position: center;
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+  // font-family: 'kokoro';
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+  .main-secction{
+    .core-member-profile{
+      text-align: center;
+      margin: 20px;
+      display:inline-block;
+    }
+
+    .member-sns{
+      margin-top: 20px;
+      text-align: center;
+      .sns-icon{
+        margin: 5px;
+        display:inline-block;
+      }
+    }
+
+    h5{
+      margin: 0;
+      // color: white;
+    }
   }
 }

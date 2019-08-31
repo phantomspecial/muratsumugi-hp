@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require active_admin/base
 //= require materialize
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
