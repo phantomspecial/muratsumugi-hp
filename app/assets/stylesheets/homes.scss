@@ -126,7 +126,8 @@
   height: 800px;
   width: 100%;
   background-size:cover;
-  background-color: #FAFAFA;
+  background-color: #FFB432;
+  color: white;
   // font-family: 'kokoro';
 
   .inner-section{
@@ -136,6 +137,7 @@
 
     h2{
       margin: 0;
+      color: white;
       // color: white;
     }
   }
@@ -190,6 +192,7 @@
     .core-member-profile{
       text-align: center;
       display:inline-block;
+      margin: 20px;
     }
 
     .member-sns{
