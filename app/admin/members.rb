@@ -4,7 +4,7 @@ ActiveAdmin.register Member do
                 :facebook,:instagram
   form do |f|
     f.inputs do
-      f.input :project
+      f.input :project, optional: true
       f.input :member_type
       f.input :name
       f.input :furigana
