@@ -39,18 +39,18 @@ div class="member-container"
       - set_support_members.each do |support_member|
         - unless support_member.image.blank?
           li class="core-member-profile"
-            a class="modal-trigger" href="#modal-member-profile"
+            a class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
               = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
 
-          div id="modal-member-profile" class="modal"
-            div class="modal-content"
-              h4
-                | Modal Header
-              p
-                | A bunch of text
-            div class="modal-footer"
-              a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"
-                | Agree
+            div id="modal-member-profile" class="modal"
+              div class="modal-content"
+                h4
+                  | Modal Header
+                p
+                  | A bunch of text
+              div class="modal-footer"
+                a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"
+                  | Agree
 
           h6 class="member-title"
             ="#{support_member.title}"
