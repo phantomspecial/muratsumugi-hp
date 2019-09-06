@@ -5,6 +5,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 以下jQuery
 $(document).ready(function(){
-    debugger;
     $('.modal').modal();
 });

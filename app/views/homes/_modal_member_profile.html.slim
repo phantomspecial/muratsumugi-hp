@@ -1,8 +1,9 @@
-div id="modal-member-profile" class="modal"
+div id="modal-member-profile-#{member.id}" class="modal"
   div class="modal-content"
     h4
-      | Modal Header/h4
+      | #{member.name}
     p
-      | A bunch of text/p
+      | A bunch of text
   div class="modal-footer"
-    a href="#!" class="modal-close waves-effect waves-green btn-flat"Agree/a
+    a href="#!" class="modal-close waves-effect waves-green btn-flat"
+      | Agree

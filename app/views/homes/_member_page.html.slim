@@ -6,27 +6,28 @@ div class="member-container"
         |  - CORE MEMBER -
 
     ul class="main-secction center-align"
-      - set_core_members.each do |core_member|
-        - unless core_member.image.blank?
+      - set_core_members.each do |member|
+        - unless member.image.blank?
           li class="core-member-profile"
-            div data-target="modal-member-profile" class="modal-trigger"
-              = image_tag(core_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle' )
+            = render partial: 'modal_member_profile', locals: { member: member }
+            div data-target="modal-member-profile-#{member.id}" class="modal-trigger"
+              = image_tag(member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle' )
             h6 class="i_member-title"
-              ="#{core_member.title}"
+              ="#{member.title}"
             h5 class="member-name"
-              = "#{core_member.name}"
+              = "#{member.name}"
             ul class="member-sns"
-              - unless core_member.facebook.blank?
+              - unless member.facebook.blank?
                 li class="sns-icon"
-                  a href="#{core_member.facebook}"
+                  a href="#{member.facebook}"
                     = image_tag("/images/facebook_1.png", alt: "facebook画像", size: '30x30' )
-              - unless core_member.twitter.blank?
-                a href="#{core_member.twitter}"
+              - unless member.twitter.blank?
+                a href="#{member.twitter}"
                   li class="sns-icon"
                     = image_tag("/images/twitter_1.png", alt: "twitter画像", size: '30x30' )
-              - unless core_member.instagram.blank?
+              - unless member.instagram.blank?
                 li class="sns-icon"
-                  a href="#{core_member.twitter}"
+                  a href="#{member.twitter}"
                     = image_tag("/images/instagram.png", alt: "instagram画像", size: '30x30' )
 
 div class="member-container"
@@ -36,28 +37,26 @@ div class="member-container"
         | - SUPPORTING MEMBER -
 
     ul class="main-secction center-align"
-      - set_support_members.each do |support_member|
-        - unless support_member.image.blank?
-
-          = render partial: 'modal_member_profile'
-
+      - set_support_members.each do |member|
+        - unless member.image.blank?
           li class="core-member-profile"
-            a class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
-              = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
+            = render partial: 'modal_member_profile', locals: { member: member }
+            div data-target="modal-member-profile-#{member.id}" class="modal-trigger"
+              = image_tag member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
             h6 class="member-title"
-              ="#{support_member.title}"
+              ="#{member.title}"
             h5 class="member-name"
-              = "#{support_member.name}"
+              = "#{member.name}"
             ul class="member-sns center"
-              - unless support_member.facebook.blank?
+              - unless member.facebook.blank?
                 li class="sns-icon"
-                  a href="#{support_member.facebook}"
+                  a href="#{member.facebook}"
                     = image_tag("/images/facebook_1.png", alt: "facebook画像", size: '30x30' )
-              - unless support_member.twitter.blank?
-                a href="#{support_member.twitter}"
+              - unless member.twitter.blank?
+                a href="#{member.twitter}"
                   li class="sns-icon"
                     = image_tag("/images/twitter_1.png", alt: "twitter画像", size: '30x30' )
-              - unless support_member.instagram.blank?
+              - unless member.instagram.blank?
                 li class="sns-icon"
-                  a href="#{support_member.twitter}"
+                  a href="#{member.twitter}"
                     = image_tag("/images/instagram.png", alt: "instagram画像", size: '30x30' )
