@@ -1,16 +1,16 @@
-section class="section member" id="MEMBER"
-  div class="member-container"
-    div class="row"
-      div class="inner-section"
-        h2 style="margin-top: 0;"
-          |  - CORE MEMBER -
+section class="section_member" id="MEMBER"
+div class="member-container"
+  div class="row"
+    div class="inner-section"
+      h2 style="margin-top: 0;"
+        |  - CORE MEMBER -
 
-      ul class="main-secction"
-        - set_core_members.each do |core_member|
-          - unless core_member.image.blank?
-            li class="core-member-profile"
-              div data-target="modal-member-profile" class="modal-trigger"
-                = image_tag(core_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle' )
+    ul class="main-secction center-align"
+      - set_core_members.each do |core_member|
+        - unless core_member.image.blank?
+          li class="core-member-profile"
+            div data-target="modal-member-profile" class="modal-trigger"
+              = image_tag(core_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle' )
             h6 class="i_member-title"
               ="#{core_member.title}"
             h5 class="member-name"
@@ -29,34 +29,23 @@ section class="section member" id="MEMBER"
                   a href="#{core_member.twitter}"
                     = image_tag("/images/instagram.png", alt: "instagram画像", size: '30x30' )
 
-  div class="member-container"
-    div class="row"
-      div class="inner-section"
-        h2 style="margin-top: 0;"
-          | - SUPPORTING MEMBER -
+div class="member-container"
+  div class="row"
+    div class="inner-section"
+      h2 style="margin-top: 0;"
+        | - SUPPORTING MEMBER -
 
-      ul class="main-secction"
-        - set_support_members.each do |support_member|
-          - unless support_member.image.blank?
-            li class="core-member-profile"
-              a class="modal-trigger" href="#modal-member-profile"
-                = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
-
-            div id="modal-member-profile" class="modal"
-              div class="modal-content"
-                h4
-                  | Modal Header
-                p
-                  | A bunch of text
-              div class="modal-footer"
-                a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"
-                  | Agree
-
+    ul class="main-secction center-align"
+      - set_support_members.each do |support_member|
+        - unless support_member.image.blank?
+          li class="core-member-profile"
+            div class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
+              = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
             h6 class="member-title"
               ="#{support_member.title}"
             h5 class="member-name"
               = "#{support_member.name}"
-            ul class="member-sns"
+            ul class="member-sns center"
               - unless support_member.facebook.blank?
                 li class="sns-icon"
                   a href="#{support_member.facebook}"

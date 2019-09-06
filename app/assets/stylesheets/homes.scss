@@ -24,6 +24,7 @@
 
 .top-container{
   height: 850px;
+  height: 100%;
   width: 100%;
   background-size:cover;
   background-position: center;
@@ -39,7 +40,9 @@
     animation-iteration-count:1; //繰り返し回数
     animation-direction:normal; //往復処理をするかどうか
     animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+
   }
+
   // アニメーション
   @keyframes fade-in {
     0% {opacity: 0; transform: translate3d(0,20px,0);}
@@ -47,16 +50,10 @@
   }
 
   img {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    margin: auto;
-
     width:100%;
     max-width:40vw;
-    height:auto;
+    padding: 25% 0;
+
   }
 
   .sub-title{
@@ -75,99 +72,74 @@
 
 .vision-container{
   background-position: center;
-  height: 800px;
+  height: 100%;
   width: 100%;
   background-size:cover;
-  // background-color: #FAFAFA;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   .inner-section{
-    padding-top: 80px;
-    padding-bottom: 80px;
-    text-align: center;
-
+    margin-bottom: 60px;
     h2{
       margin: 0;
-      // color: white;
     }
   }
 
   .left-section{
-    float: left;
-    width: 50％;
-    text-align: right;
-    padding-right: 50px;
-
     img {
-      width: 600px;
-      height: 450px;
+      width: 500px;
+      height: 525px;
       margin: 0;
     }
   }
 
   .right-section{
-    float: right;
-    text-align: left;
-    width: 50％;
-    padding-left: 50px;
-    padding-top: 20px;
-
-    h4{
+    h5{
       margin: 0;
     }
   }
 
   .story-section{
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
   }
 }
 
 .activity-container{
   background-position: center;
-  height: 800px;
+  height: 100%;
   width: 100%;
   background-size:cover;
-  background-color: #FAFAFA;
-  // font-family: 'kokoro';
+  background-color: #FFB432;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   .inner-section{
-    padding-top: 60px;
-    padding-bottom: 80px;
-    text-align: center;
-
+    margin-bottom: 60px;
     h2{
       margin: 0;
-      // color: white;
+      color: white;
     }
   }
 
   .left-section{
-    float: left;
-    width: 50％;
-    text-align: right;
-    // padding-top: 80px;
-    padding-right: 50px;
-
     img {
-      width: 600px;
-      height: 450px;
+      width: 500px;
+      height: 400px;
       margin: 0;
     }
   }
 
   .right-section{
-    float: right;
-    text-align: left;
-    width: 50％;
-    padding-left: 50px;
-    // padding-top: 20px;
-
     h4{
       margin: 0;
     }
   }
 
   .story-section{
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
   }
 }
 
@@ -176,7 +148,6 @@
   width: 100%;
   background-size:cover;
   text-align: center;
-  // font-family: 'kokoro';
 
   .inner-section{
     padding-top: 80px;
@@ -190,8 +161,8 @@
   .main-secction{
     .core-member-profile{
       text-align: center;
-      margin: 20px;
       display:inline-block;
+      margin: 20px;
     }
 
     .member-sns{
@@ -206,6 +177,115 @@
     h5{
       margin: 0;
       // color: white;
+    }
+  }
+}
+
+.history-container{
+  background-position: center;
+  height: 1100px;
+  background-size:cover;
+  background-color: #FAFAFA;
+  text-align: center;
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-secction{
+    margin-top: 20px;
+
+  }
+
+  .story-section{
+    margin-top: 40px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .movie-section{
+    margin-top: 40px;
+  }
+}
+
+.news-container{
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-section{
+
+    .news-content{
+      padding-top: 20px;
+      margin-top: 40px;
+
+      .news-timezone{
+      h6{
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      }
+      .news-title{
+        margin: 10px;
+      }
+      .news-link{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        a{
+          color: azure;
+        }
+      }
+    }
+  }
+
+  .news-index-link{
+    a{
+      color: azure;
+    }
+  }
+}
+
+.contact-container{
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-size:cover;
+  background-color: #FAFAFA;
+  padding-bottom: 60px;
+
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-section{
+    color: white;
+
+    i{
+      text-align: center;
     }
   }
 }

@@ -10,4 +10,8 @@
 #
 
 class News < ApplicationRecord
+
+  # Uploader
+  mount_uploader :image, ImageUploader
+  
 end
