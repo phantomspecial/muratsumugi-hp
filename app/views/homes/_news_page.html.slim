@@ -2,15 +2,29 @@ section class="section_news" id="NEWS"
 div class="news-container"
   div class="row"
     div class="inner-section"
-      h2 style="margin-top: 0;"
+      h2
         | - NEWS -
-/
-/     div class=" main-section"
-/       - @news.each do |news|
-/         div class="news-contents"
-/           div class="news-timezone"
-/             = "#{news.created_at.strftime("%Y-%m-%d")}"
-/           div class="news-title"
-/             = "#{news.title}"
-/           div class="news-link"
-/             = "→ 詳しく確認する"
+
+    div class=" main-section"
+      - @news.each do |news|
+        div class="news-content col s6 m4 l4"
+          div class="icon-block z-depth-5"
+            div class="news-timezone"
+              h6
+                = "#{news.created_at.strftime("%Y-%m-%d")}"
+            div class="news-image"
+              = image_tag news.image.to_s, alt: "profile画像", size: '250x180'
+            div class="news-title"
+              h6
+                = "#{news.title}"
+            div class="news-link"
+              = link_to "詳細", "#{news.url}", class: "waves-effect waves-light btn"
+
+  br
+  br
+  br
+  br
+    div class="news-index-link col s12 m12 l12"
+      = link_to "もっと見る", root_path, class: "waves-effect waves-light btn"
+  br
+  br

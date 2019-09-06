@@ -24,6 +24,7 @@
 
 .top-container{
   height: 850px;
+  height: 100%;
   width: 100%;
   background-size:cover;
   background-position: center;
@@ -39,7 +40,9 @@
     animation-iteration-count:1; //繰り返し回数
     animation-direction:normal; //往復処理をするかどうか
     animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+
   }
+
   // アニメーション
   @keyframes fade-in {
     0% {opacity: 0; transform: translate3d(0,20px,0);}
@@ -47,16 +50,10 @@
   }
 
   img {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    margin: auto;
-
     width:100%;
     max-width:40vw;
-    height:auto;
+    padding: 25% 0;
+
   }
 
   .sub-title{
@@ -90,8 +87,8 @@
 
   .left-section{
     img {
-      width: 600px;
-      height: 450px;
+      width: 500px;
+      height: 525px;
       margin: 0;
     }
   }
@@ -218,11 +215,10 @@
 
 .news-container{
   background-position: center;
-  height: 750px;
+  height: 100%;
   width: 100%;
   background-size:cover;
   text-align: center;
-  // font-family: 'kokoro';
 
   .inner-section{
     padding-top: 80px;
@@ -235,26 +231,44 @@
   }
 
   .main-section{
-    margin-top: 30px;
 
-    .news-contents{
+    .news-content{
+      padding-top: 20px;
       margin-top: 40px;
+
       .news-timezone{
-        margin-bottom: 10px;
+      h6{
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
       }
       .news-title{
         margin: 10px;
       }
+      .news-link{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        a{
+          color: azure;
+        }
+      }
+    }
+  }
+
+  .news-index-link{
+    a{
+      color: azure;
     }
   }
 }
 
 .contact-container{
   background-position: center;
-  height: 550px;
+  height: 100%;
   width: 100%;
   background-size:cover;
   background-color: #FAFAFA;
+  padding-bottom: 60px;
 
 
   .inner-section{

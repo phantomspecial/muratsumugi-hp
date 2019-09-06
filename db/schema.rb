@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_09_01_024351) do
   create_table "news", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", comment: "お知らせ", force: :cascade do |t|
     t.string "title", comment: "タイトル"
     t.string "url", comment: "お知らせのURL"
+    t.string "image", comment: "サムネイル写真"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
