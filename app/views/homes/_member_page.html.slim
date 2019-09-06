@@ -38,8 +38,11 @@ div class="member-container"
     ul class="main-secction center-align"
       - set_support_members.each do |support_member|
         - unless support_member.image.blank?
+
+          = render partial: 'modal_member_profile'
+
           li class="core-member-profile"
-            div class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
+            a class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
               = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
             h6 class="member-title"
               ="#{support_member.title}"
