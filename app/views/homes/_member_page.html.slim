@@ -5,7 +5,7 @@ div class="member-container"
       h2 style="margin-top: 0;"
         |  - CORE MEMBER -
 
-    ul class="main-secction col s12"
+    ul class="main-secction center-align"
       - set_core_members.each do |core_member|
         - unless core_member.image.blank?
           li class="core-member-profile"
@@ -35,37 +35,26 @@ div class="member-container"
       h2 style="margin-top: 0;"
         | - SUPPORTING MEMBER -
 
-    ul class="main-secction"
+    ul class="main-secction center-align"
       - set_support_members.each do |support_member|
         - unless support_member.image.blank?
           li class="core-member-profile"
-            a class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
+            div class="modal-trigger" href="#modal-member-profile" data-target="modal-member-profile"
               = image_tag support_member.image.to_s, alt: "profile画像", size: '200x200', class: 'circle'
-
-            div id="modal-member-profile" class="modal"
-              div class="modal-content"
-                h4
-                  | Modal Header
-                p
-                  | A bunch of text
-              div class="modal-footer"
-                a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"
-                  | Agree
-
-          h6 class="member-title"
-            ="#{support_member.title}"
-          h5 class="member-name"
-            = "#{support_member.name}"
-          ul class="member-sns"
-            - unless support_member.facebook.blank?
-              li class="sns-icon"
-                a href="#{support_member.facebook}"
-                  = image_tag("/images/facebook_1.png", alt: "facebook画像", size: '30x30' )
-            - unless support_member.twitter.blank?
-              a href="#{support_member.twitter}"
+            h6 class="member-title"
+              ="#{support_member.title}"
+            h5 class="member-name"
+              = "#{support_member.name}"
+            ul class="member-sns center"
+              - unless support_member.facebook.blank?
                 li class="sns-icon"
-                  = image_tag("/images/twitter_1.png", alt: "twitter画像", size: '30x30' )
-            - unless support_member.instagram.blank?
-              li class="sns-icon"
+                  a href="#{support_member.facebook}"
+                    = image_tag("/images/facebook_1.png", alt: "facebook画像", size: '30x30' )
+              - unless support_member.twitter.blank?
                 a href="#{support_member.twitter}"
-                  = image_tag("/images/instagram.png", alt: "instagram画像", size: '30x30' )
+                  li class="sns-icon"
+                    = image_tag("/images/twitter_1.png", alt: "twitter画像", size: '30x30' )
+              - unless support_member.instagram.blank?
+                li class="sns-icon"
+                  a href="#{support_member.twitter}"
+                    = image_tag("/images/instagram.png", alt: "instagram画像", size: '30x30' )
