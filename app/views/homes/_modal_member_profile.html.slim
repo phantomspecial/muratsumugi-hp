@@ -1,9 +1,12 @@
 div id="modal-member-profile-#{member.id}" class="modal"
   div class="modal-content"
     h4
-      | #{member.name}
-    p
-      | A bunch of text
+      | #{member.name} / #{member.english_name}
+      hr
+    span class="center-align"
+      | #{simple_format(member.profile)}
+      hr
   div class="modal-footer"
-    a href="#!" class="modal-close waves-effect waves-green btn-flat"
-      | Agree
+    a href="#!" class="btn-floating btn-medium waves-effect waves-light modal-close"
+      i class="material-icons"
+        | close
