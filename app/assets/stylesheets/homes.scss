@@ -246,11 +246,16 @@
       padding-top: 20px;
       margin-top: 40px;
 
+      img{
+        width: auto;
+        width: 75%;
+      }
+
       .news-timezone{
       h6{
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
       }
       .news-title{
         margin: 10px;

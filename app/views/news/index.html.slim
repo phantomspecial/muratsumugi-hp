@@ -1,4 +1,3 @@
-section class="section_news" id="NEWS"
 div class="news-container"
   div class="row"
     div class="inner-section"
@@ -7,7 +6,7 @@ div class="news-container"
 
     div class=" main-section"
       - @news.each do |news|
-        div class="news-content col s6 m4 l4"
+        div class="news-content col s6 m3 l3"
           div class="icon-block z-depth-5"
             div class="news-timezone"
               h6
@@ -19,11 +18,3 @@ div class="news-container"
                 = "#{news.title}"
             div class="news-link"
               = link_to "詳細", "#{news.url}", class: "waves-effect waves-light btn"
-  br
-  br
-  br
-  br
-    div class="news-index-link col s12 m12 l12"
-      = link_to "もっと見る", news_index_path, class: "waves-effect waves-light btn"
-  br
-  br

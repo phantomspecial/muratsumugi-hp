@@ -1,3 +1,53 @@
-// Place all the styles related to the news controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.news-container{
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+
+  .inner-section{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  .main-section{
+
+    .news-content{
+      padding-top: 20px;
+      margin-top: 40px;
+
+      img{
+        width: auto;
+        width: 75%;
+      }
+
+      .news-timezone{
+        h6{
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+      .news-title{
+        margin: 10px;
+      }
+      .news-link{
+        padding-top: 5px;
+        padding-bottom: 30px;
+        a{
+          color: azure;
+        }
+      }
+    }
+  }
+
+  .news-index-link{
+    a{
+      color: azure;
+    }
+  }
+}
