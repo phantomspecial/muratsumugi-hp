@@ -71,3 +71,6 @@ gem 'activeadmin'
 
 # Uploader
 gem 'carrierwave'
+
+# View
+gem 'kaminari'

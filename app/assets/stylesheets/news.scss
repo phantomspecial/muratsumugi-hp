@@ -45,6 +45,34 @@
     }
   }
 
+  .page-section{
+    clear: both;
+    padding-top: 20px;
+    background-color: transparent;
+
+    .pagination{
+      float: none;
+
+      ul{
+        float: left;
+        li{
+          vertical-align: baseline;
+        }
+      }
+      .btn{
+        clear: both;
+      }
+    }
+    .active{
+      background-color: transparent;
+    }
+
+    i.material-icons{
+      vertical-align:middle;
+      font-size: 20px;
+    }
+  }
+
   .news-index-link{
     a{
       color: azure;
