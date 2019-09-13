@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resource :homes, only: [:index]
   resource :members
   resource :contact, only: [:create]
+  resources :news, only: [:index]
 end
