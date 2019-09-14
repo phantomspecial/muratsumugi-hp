@@ -1,0 +1,29 @@
+div class="news-container"
+  div class="row"
+    div class="inner-section"
+      h2
+        | - NEWS -
+
+    div class="main-section"
+      - @news.each do |news|
+        div class="news-content col s6 m3 l3"
+          div class="icon-block z-depth-5"
+            div class="news-timezone"
+              h6
+                = "#{news.created_at.strftime("%Y-%m-%d")}"
+            div class="news-image"
+              = image_tag news.image.to_s, alt: "profile画像", size: '250x180'
+            div class="news-title"
+              h6
+                = "#{news.title}"
+            div class="news-link"
+              = link_to "詳細", "#{news.url}", class: "waves-effect waves-light btn"
+
+    div class="page-section"
+      div class="page-content col s12 m4 l2"
+      div class="page-content col s12 m4 l8"
+        = paginate @news
+        = link_to "戻る", root_path, class: "waves-effect waves-light btn"
+      div class="page-content col s12 m4 l2"
+
+
